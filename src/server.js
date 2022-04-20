@@ -8,7 +8,9 @@ import passport from "passport";
 
 import backRouter from "./routers/backRouter.js";
 
+import { localsMiddleware } from "./middlewares.js";
 import "./passport.js";
+import "./db.js";
 
 const app = express();
 
@@ -31,6 +33,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use(localsMiddleware);
 app.use((req, res, next) => {
   res.header("Cross-Origin-Embedder-Policy", "credentialless");
   res.header("Cross-Origin-Opener-Policy", "same-origin");
@@ -52,4 +55,4 @@ app.get(
 
 app.use("/", backRouter);
 
-app.listen(4000, () => console.log(`Example app listening on port ${4000}!`));
+app.listen(4000, () => console.log(`listening on port ${4000}!`));

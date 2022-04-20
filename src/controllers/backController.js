@@ -19,8 +19,6 @@ export const success = async (req, res) => {
     });
   }
   req.session.loggedIn = true;
-  console.log("user");
-
   req.session.user = user;
   return res.redirect("/");
 };
@@ -31,4 +29,25 @@ export const fail = (req, res) => {
 export const logout = (req, res) => {
   req.session.destroy();
   return res.redirect("/");
+};
+
+export const postEdit = async (req, res) => {
+  const {
+    session: {
+      user: { _id, avatarUrl },
+    },
+    body: { name, email },
+    file,
+  } = req;
+  const updatedUser = await User.findByIdAndUpdate(
+    _id,
+    {
+      avatarUrl: file ? file.location : avatarUrl,
+      name,
+      email,
+    },
+    { new: true }
+  );
+  req.session.user = updatedUser;
+  return res.redirect("/profile");
 };

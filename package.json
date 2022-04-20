@@ -10,14 +10,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/node": "^7.16.8",
+    "babel-node": "0.0.1-security",
     "connect-mongo": "^4.6.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "express-session": "^1.17.2",
     "google-auth-library": "^7.14.0",
+    "mongodb": "^4.5.0",
     "mongoose": "^6.2.7",
     "nodemon": "^2.0.15",
+    "npm": "^8.5.0",
     "passport": "^0.5.2",
     "passport-google-oauth20": "^2.0.0"
   },
