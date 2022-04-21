@@ -8,7 +8,7 @@ import passport from "passport";
 
 import backRouter from "./routers/backRouter.js";
 
-import { localsMiddleware } from "./middlewares.js";
+import { localsMiddleware } from "./middleware.js";
 import "./passport.js";
 import "./db.js";
 

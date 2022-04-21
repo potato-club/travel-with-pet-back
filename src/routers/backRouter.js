@@ -6,7 +6,7 @@ import {
   logout,
   postEdit,
 } from "../controllers/backController.js";
-import { avatarUpload } from "../middlewares.js";
+import { avatarUpload } from "../middleware.js";
 
 const backRouter = express.Router();
 
