@@ -10,8 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "@babel/node": "^7.16.8",
     "babel-node": "0.0.1-security",
+=======
+    "aws-sdk": "^2.1118.0",
+>>>>>>> 2ebb1f22d3a0b85c26dd9705c304fd18c36d7f67
     "connect-mongo": "^4.6.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
@@ -20,6 +24,8 @@
     "google-auth-library": "^7.14.0",
     "mongodb": "^4.5.0",
     "mongoose": "^6.2.7",
+    "multer": "^1.4.4",
+    "multer-s3": "^2.10.0",
     "nodemon": "^2.0.15",
     "npm": "^8.5.0",
     "passport": "^0.5.2",
